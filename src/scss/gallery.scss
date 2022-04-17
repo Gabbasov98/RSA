@@ -1,0 +1,104 @@
+.gallery {
+    padding: 80px 0 50px;
+    overflow: hidden;
+    background-color: #fff;
+    &__title {
+        text-align: center;
+        padding: 0 20px;
+    }
+    &__slider {
+        margin-top: 80px;
+        position: relative;
+        .swiper-container {
+            width: 1010px;
+            max-width: calc(100% - 40px);
+            margin: 0 auto;
+        }
+    }
+    &__item {
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            background: linear-gradient(179.83deg, rgba(0, 0, 0, 0) 43.24%, rgba(0, 0, 0, 0.64) 70.43%);
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+        img {
+            width: 100%;
+        }
+        &-title {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 144%;
+            color: #FFFFFF;
+            position: absolute;
+            left: 0;
+            bottom: 34px;
+            width: 100%;
+            padding: 0 30px;
+            z-index: 2;
+        }
+    }
+    .swiper-slide {
+        &:after {
+            z-index: 3;
+            background: linear-gradient(269.22deg, rgba(246, 247, 250, 0) 0.78%, #F6F7FA 108.99%);
+        }
+        &-active,
+        &-next {
+            &::after {
+                display: none;
+            }
+        }
+        &-prev {
+            &::after {
+                background: linear-gradient(269.22deg, rgba(213, 208, 208, 0.18) 0.78%, #FFFFFF 110.03%);
+            }
+        }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        background: #FFFFFF;
+    }
+    .swiper-button-prev {
+        left: calc( (100% - 1010px) / 2 - 170px);
+    }
+    .swiper-button-next {
+        right: calc( (100% - 1010px) / 2 - 170px);
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .gallery {
+        .swiper-button-prev {
+            left: 20px;
+        }
+        .swiper-button-next {
+            right: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .gallery {
+        padding: 50px 0;
+        &__slider {
+            margin-top: 30px;
+        }
+        &__item {
+            &-title {
+                bottom: 10px;
+                padding: 0 10px;
+                font-size: 14px;
+                line-height: 110%;
+            }
+        }
+    }
+}

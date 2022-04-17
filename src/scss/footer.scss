@@ -1,0 +1,131 @@
+@import "vars";
+.footer {
+    background-color: transparent;
+    padding: 158px 0 43px;
+    &__wrap,
+    &__wrap2 {
+        display: flex;
+        position: relative;
+    }
+    &__wrap2 {
+        margin-top: 120px;
+    }
+    &__col {
+        &:first-child {
+            width: 290px;
+            margin-right: 256px;
+        }
+        &:nth-child(2) {
+            margin-right: 130px;
+        }
+    }
+    &__logo {
+        width: 290px;
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+    &__link {
+        font-size: 15px;
+        line-height: 17px;
+        letter-spacing: 0.02em;
+        color: #848EA8;
+        display: block;
+        &:not(:last-child) {
+            margin-bottom: 26px;
+        }
+        &:hover {
+            color: $green;
+        }
+    }
+    &__by,
+    &__conf,
+    &__protect {
+        font-size: 14px;
+        line-height: 16px;
+        color: #848EA8;
+    }
+    &__by {
+        display: flex;
+        align-items: center;
+        svg {
+            margin-left: 7px;
+        }
+        a:hover {
+            path {
+                fill: $green;
+            }
+        }
+    }
+    &__up {
+        margin-left: auto;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .footer {
+        &__col {
+            &:first-child {
+                margin-right: 130px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .footer {
+        padding: 50px 0;
+        &__wrap,
+        &__wrap2 {
+            justify-content: space-between;
+        }
+        &__wrap2 {
+            margin-top: 60px;
+        }
+        &__col {
+            margin-right: 0 !important;
+            &:first-child {
+                margin-right: 0px;
+            }
+        }
+        &__up {
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .footer {
+        &__wrap,
+        &__wrap2 {
+            display: block;
+        }
+        &__col {
+            width: 100% !important;
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+        &__logo {
+            max-width: calc(100% - 60px);
+            margin-bottom: 40px;
+        }
+        &__link {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+        &__up {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 45px;
+            height: 45px;
+        }
+    }
+}

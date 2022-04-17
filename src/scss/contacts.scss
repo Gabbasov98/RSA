@@ -1,0 +1,132 @@
+.contacts {
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+    &__map {
+        position: absolute;
+        width: 1200px;
+        height: 100%;
+        left: 400px;
+        top: 0;
+        border-radius: 0px 0px 0px 400px;
+        overflow: hidden;
+    }
+    &__inner {
+        padding: 81px 0;
+        max-width: 400px;
+        position: relative;
+    }
+    &__group {
+        margin-top: 40px;
+    }
+    &__subtitle {
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.04em;
+        color: #848EA8;
+        margin-bottom: 20px;
+    }
+    &__wrap {
+        display: flex;
+        align-items: center;
+    }
+    &__phone {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        margin-right: 45px;
+        &:hover {
+            color: $green;
+        }
+    }
+    &__socials {
+        display: flex;
+        align-items: center;
+        &-item {
+            &:not(:last-child) {
+                margin-right: 17px;
+            }
+            &:hover {
+                path {
+                    fill: $green;
+                }
+            }
+            svg {
+                width: 23px;
+            }
+        }
+    }
+    &__address {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        max-width: 260px;
+    }
+    &__email {
+        &:hover {
+            color: $green;
+        }
+    }
+    &__email,
+    &__time {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    &__btn {
+        width: 220px;
+        height: 60px;
+        margin-top: 24px;
+        border-radius: 41px;
+        svg {
+            margin-right: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .contacts {
+        &__inner {
+            max-width: 300px;
+        }
+        &__map {
+            left: 320px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .contacts {
+        &__inner {
+            max-width: 100%;
+            padding: 50px 0 0;
+        }
+        &__map {
+            position: static;
+            width: calc(100% + 40px);
+            height: 400px;
+            margin: 40px 0 0 -20px;
+            border-radius: 0;
+        }
+        &__group {
+            margin-top: 30px;
+        }
+        &__address {
+            font-size: 18px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contacts {
+        &__btn {
+            height: 45px;
+            font-size: 14px;
+            svg {
+                margin-right: 8px;
+            }
+        }
+    }
+}

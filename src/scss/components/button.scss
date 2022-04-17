@@ -1,0 +1,47 @@
+@import "../vars";
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all ease-out .225s;
+    padding: 0;
+    letter-spacing: 0.02em;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-green-outline {
+    border: 1px solid $green;
+    color: #FFFFFF;
+    &:hover {
+        background-color: $green;
+        color: #FFFFFF;
+    }
+}
+
+.btn-green {
+    background-color: $green;
+    color: #fff;
+    &:hover {
+        background-color: darken($green, 5%);
+        color: #fff;
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #CCD1DC;
+    border-radius: 50%;
+    opacity: 1;
+    &:hover {
+        border-color: $green;
+        path {
+            stroke: $green;
+        }
+    }
+}

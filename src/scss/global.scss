@@ -1,0 +1,36 @@
+@import 'vars';
+html {
+    width: 100%;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    color: $black;
+    background: #090D18;
+    &.fixed-body {
+        overflow-y: hidden;
+    }
+}
+
+.container {
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0 30px;
+    @media screen and (max-width: 992px) {
+        padding: 0 20px;
+    }
+}

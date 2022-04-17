@@ -1,0 +1,110 @@
+.brands {
+    padding: 50px 0 100px;
+    background-color: #fff;
+    overflow: hidden;
+    &__title {
+        max-width: 585px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &__inner {
+        margin-top: 55px;
+        position: relative;
+    }
+    .swiper-container {
+        overflow: hidden;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            height: 100%;
+            width: 1px;
+            background-color: #fff;
+            right: 0px;
+            top: 0;
+            z-index: 2;
+        }
+    }
+    .swiper-button-prev {
+        left: calc( (100% - 1010px) / 2 - 210px);
+    }
+    .swiper-button-next {
+        right: calc( (100% - 1010px) / 2 - 210px);
+    }
+    &__col {
+        &:not(:last-child) {
+            border-right: 1px solid rgba(204, 209, 220, 0.4);
+        }
+    }
+    &__item {
+        padding: 50px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(204, 209, 220, 0.4);
+        }
+        &:hover {
+            path {
+                fill: #18368F;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .brands {
+        &__inner {
+            padding: 0 60px;
+        }
+        .swiper-button-prev {
+            left: 0px;
+        }
+        .swiper-button-next {
+            right: 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .brands {
+        padding: 50px 0;
+        &__inner {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .brands {
+        .container {
+            padding: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .brands {
+        &__col {
+            border: 1px solid rgba(204, 209, 220, 0.4);
+        }
+        &__inner {
+            padding: 0 45px;
+        }
+        &__item {
+            padding: 25px 0;
+        }
+        .swiper-container {
+            &::before {
+                display: none;
+            }
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}

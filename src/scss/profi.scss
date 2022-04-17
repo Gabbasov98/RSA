@@ -1,0 +1,101 @@
+.profi {
+    padding: 110px 0 80px;
+    background-color: #fff;
+    overflow: hidden;
+    &__title {
+        text-align: center;
+    }
+    &__inner {
+        margin-top: 85px;
+        position: relative;
+    }
+    &__item {
+        &-img {
+            img {
+                width: 100%;
+                border-radius: 50%;
+                display: block;
+            }
+        }
+        &-title {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 21px;
+            margin-top: 34px;
+            text-align: center;
+        }
+        &-desc {
+            font-size: 16px;
+            line-height: 21px;
+            text-align: center;
+            color: #535B6D;
+            margin: 13px auto 0;
+            max-width: 202px;
+        }
+    }
+    .swiper-container {
+        overflow: hidden;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        margin-top: -70px;
+    }
+    .swiper-button-prev {
+        left: -90px;
+    }
+    .swiper-button-next {
+        right: -90px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .profi {
+        &__inner {
+            padding: 0 60px;
+        }
+        .swiper-button-prev {
+            left: 0;
+        }
+        .swiper-button-next {
+            right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .profi {
+        padding: 50px 0;
+        &__inner {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .profi {
+        .container {
+            padding: 0;
+        }
+        &__inner {
+            padding: 0 45px;
+        }
+        &__item {
+            &-title {
+                font-size: 17px;
+                line-height: 120%;
+                margin-top: 15px;
+            }
+            &-desc {
+                margin-top: 10px;
+                font-size: 15px;
+                line-height: 120%;
+            }
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            width: 40px;
+            height: 40px;
+            margin-top: -55px;
+        }
+    }
+}

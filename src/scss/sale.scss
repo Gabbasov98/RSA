@@ -1,0 +1,131 @@
+@import "vars";
+.sale {
+    padding: 50px 0;
+    background-color: #fff;
+    color: #fff;
+    &__inner {
+        background: #111624;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 56px 73px 84px;
+        position: relative;
+        min-height: 578px;
+    }
+    &__slider {
+        width: 577px;
+        max-width: 100%;
+    }
+    &__img {
+        position: absolute;
+        height: 100%;
+        width: auto;
+        left: 690px;
+        top: 0;
+        border-radius: 320px 10px 10px 320px;
+    }
+    &__item {
+        &-badge {
+            display: inline-flex;
+            padding: 7px 18px;
+            white-space: nowrap;
+            background: #FFFFFF;
+            border-radius: 3px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            color: $green;
+        }
+        &-subtitle {
+            font-weight: 600;
+            font-size: 24px;
+            margin-top: 58px;
+            color: $green;
+        }
+        &-title {
+            font-weight: 800;
+            font-size: 28px;
+            line-height: 139%;
+            margin-top: 30px;
+        }
+        &-desc {
+            font-size: 14px;
+            line-height: 114%;
+            margin-top: 31px;
+            color: #848EA8;
+        }
+    }
+    &__bottom {
+        margin-top: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__btn {
+        width: 357px;
+        height: 60px;
+        border-radius: 41px;
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: static;
+        margin: 0 0 0 15px;
+    }
+    .swiper-container {
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .sale {
+        padding: 25px 0;
+        &__inner {
+            min-height: unset;
+            padding: 25px 40px 35px;
+        }
+        &__img {
+            display: none;
+        }
+        &__slider {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sale {
+        &__inner {
+            padding: 20px;
+        }
+        &__item {
+            &-subtitle {
+                margin-top: 25px;
+                font-size: 18px;
+            }
+            &-title {
+                margin-top: 20px;
+                font-size: 22px;
+            }
+            &-desc {
+                margin-top: 20px;
+            }
+        }
+        &__bottom {
+            margin-top: 35px;
+            flex-wrap: wrap;
+        }
+        &__nav {
+            order: -1;
+            width: 100%;
+            margin: 0 0 20px;
+        }
+        &__btn {
+            height: 45px;
+            font-size: 14px;
+            max-width: 100%;
+        }
+    }
+}

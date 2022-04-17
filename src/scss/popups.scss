@@ -1,0 +1,105 @@
+@import 'vars';
+@import 'mixins';
+.modal-backdrop {
+    &.show {
+        opacity: 0.7;
+    }
+}
+
+.modal {
+    &-dialog {
+        background: #FFFFFF;
+        border-radius: 10px;
+        max-width: 620px;
+        pointer-events: unset;
+        padding: 80px 57px;
+    }
+    &__close {
+        position: absolute;
+        right: 14px;
+        top: 14px;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            width: 200%;
+            height: 200%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &:hover {
+            path {
+                fill-opacity: 1;
+            }
+        }
+    }
+    &__title {
+        text-align: center;
+    }
+    &__desc {
+        text-align: center;
+        font-size: 16px;
+        line-height: 25px;
+        margin-top: 30px;
+    }
+    &__form {
+        margin: 45px auto 0;
+        max-width: 380px;
+        .form-group {
+            input {
+                border-color: rgba(35, 38, 40, 0.2);
+            }
+        }
+        &-check {
+            label {
+                &::before {
+                    border-color: rgba(35, 38, 40, 0.2);
+                }
+            }
+        }
+        &-bottom {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__btn {
+        width: 256px;
+        height: 60px;
+        border-radius: 41px;
+        margin: 52px auto 0;
+        svg {
+            margin-right: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .modal {
+        &-dialog {
+            padding: 30px 20px;
+            width: 400px;
+            margin: 40px auto 0;
+            max-width: calc(100% - 20px);
+        }
+        &__desc {
+            margin-top: 15px;
+        }
+        &__form {
+            margin-top: 30px;
+            &-bottom {
+                margin-top: 15px;
+            }
+        }
+        &__btn {
+            margin-top: 25px;
+            height: 45px;
+            font-size: 14px;
+            width: 100%;
+            svg {
+                margin-right: 8px;
+            }
+        }
+    }
+}

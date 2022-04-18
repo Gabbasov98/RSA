@@ -9,24 +9,57 @@ input {
     }
 }
 
+.nice-select,
 select {
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
     -o-appearance: none;
     appearance: none;
-    background-image: url(../img/select-arrow.svg);
-    background-repeat: no-repeat;
-    background-position: right 25px center;
     backdrop-filter: blur(15px);
     border-radius: 6px;
     background-color: #fff;
     height: 58px;
     font-size: 15px;
-    padding: 0 45px 0 30px;
+    padding: 0;
     color: #25282A;
+    width: 100%;
+    z-index: 3;
+    border: 1px solid #25282A !important;
     &::-ms-expand {
         display: none; // IE
+    }
+    .current {
+        background-image: url(../img/select-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: right 25px center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 45px 0 30px;
+    }
+    .option {
+        height: 45px;
+        display: flex;
+        align-items: center;
+        border-style: solid;
+    }
+    .list {
+        border-radius: 6px;
+        border-radius: 0;
+        border: 1px solid #25282A;
+        backdrop-filter: blur(15px);
+    }
+    .option:hover,
+    .option.focus,
+    .option.selected,
+    .option.selected.focus {
+        background-color: $green;
+        // color: #fff;
+    }
+    .option:hover {
+        color: #fff;
     }
 }
 

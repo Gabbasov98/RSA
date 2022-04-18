@@ -168,6 +168,8 @@ $(document).ready(function() {
     yurSlider()
     saleSlider()
 
+    $("select").niceSelect()
+
     $(".header__burger").click(function() {
         $(this).toggleClass("header__burger--active")
         $(".header__right").toggleClass("header__right--active")
@@ -184,12 +186,18 @@ $(document).ready(function() {
     $(".select-brand").change(function() {
         let models = $(this).val().split(',');
         let options = `<option selected hidden>Выберите модель</option>`
+        let options2 = `<li data-value="Выберите модель" class="option selected focus">Выберите модель</li>`
 
         for (let i = 0; i < models.length; i++) {
-
             options = options + `<option value="">${models[i]}</option>`
         }
-        $(this).parents(".parent-selects").find(".select-model").html(options)
+
+        for (let i = 0; i < models.length; i++) {
+            options2 = options2 + `<li data-value="" class="option">${models[i]}</li>`
+        }
+        $(this).parents(".parent-selects").find("select.select-model").html(options)
+        $(this).parents(".parent-selects").find(".select-model .list").html(options2)
+        $("select").niceSelect()
     })
 
     $(".seo__btn").click(function() {

@@ -164,6 +164,8 @@
         &__nav {
             top: unset;
             bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
         }
         &__example {
             height: 550px;
@@ -195,6 +197,9 @@
                 height: 90px;
                 padding: 12px;
             }
+            &-text {
+                display: none;
+            }
         }
     }
 }
@@ -213,12 +218,10 @@
             height: 350px;
         }
         &__info {
+            padding: 10px;
             &-item {
-                display: block;
-            }
-            &-desc {
-                display: block;
-                margin-top: 5px;
+                font-size: 13px;
+                line-height: 120%;
             }
         }
     }

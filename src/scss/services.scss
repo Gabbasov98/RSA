@@ -1,6 +1,8 @@
 .services {
     padding: 120px 0 80px;
     background-color: #fff;
+    background-image: url(../img/service-bg.webp);
+    background-size: cover;
     &__top {
         display: flex;
         justify-content: space-between;
@@ -30,7 +32,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        flex-wrap: wrap;
         margin-top: 50px;
     }
     &__tab {
@@ -115,10 +116,11 @@
             max-width: 490px;
         }
         &__tabs {
-            flex-wrap: wrap;
-            justify-content: flex-start;
+            overflow-x: auto;
         }
         &__tab {
+            flex-shrink: 0;
+            white-space: nowrap;
             margin-bottom: 10px;
             margin-right: 20px;
         }

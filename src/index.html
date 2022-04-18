@@ -41,10 +41,10 @@
                                     <input type='text' placeholder="Телефон" />
                                 </fieldset>
                                 <div class="main__form-check check">
-                                    <input type='checkbox' class='checkbox' />
+                                    <input checked type='checkbox' class='checkbox' />
                                     <label>
-                                Согласен с <a href="">политикой конфиденциальности</a>
-                            </label>
+                                        Согласен с <a href="">политикой конфиденциальности</a>
+                                    </label>
                                 </div>
                                 @@include('components/page-blocks/_button.html',{"class":"main__form-btn","modal":"false"})
                             </form>
@@ -63,19 +63,19 @@
                     </h2>
                     <div class="calc__selects parent-selects">
                         <div class="calc__select">
-                            <select class="select-model">
-                                <option selected hidden>Выберите модель</option>
-                                <option value="">модель</option>
-                                <option value="">модель 2</option>
-                                <option value="">модель 3</option>
-                            </select>
-                        </div>
-                        <div class="calc__select">
                             <select class="select-brand">
                                 <option hidden>Выберите марку </option>
                                 <option value="BMW1,BMW2,BMW3">BMW</option>
                                 <option value="Audi1,Audi2,Audi3">Audi</option>
                                 <option value="Mazda1,Mazda2,Mazda3">Mazda</option>
+                            </select>
+                        </div>
+                        <div class="calc__select">
+                            <select class="select-model">
+                                <option selected hidden>Выберите модель</option>
+                                <option value="">модель</option>
+                                <option value="">модель 2</option>
+                                <option value="">модель 3</option>
                             </select>
                         </div>
                     </div>

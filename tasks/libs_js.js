@@ -3,7 +3,8 @@ const plugins = [
     'node_modules/swiper/swiper-bundle.js',
     'node_modules/bootstrap/dist/js/bootstrap.js',
     'src/libs/jquery.event.move.js',
-    'src/libs/jquery.twentytwenty.js'
+    'src/libs/jquery.twentytwenty.js',
+    'src/libs/jquery.nice-select.min.js'
 ];
 const {
     src,

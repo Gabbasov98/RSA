@@ -74,6 +74,7 @@
             background-position: center;
             background-size: 15px auto;
             border-radius: 50%;
+            flex-shrink: 0;
         }
         &-title {
             margin-top: 25px;

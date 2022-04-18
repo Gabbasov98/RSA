@@ -211,6 +211,8 @@
     .photo-calc {
         &__hint {
             position: static;
+            margin: 0 auto;
+            padding-top: 90px;
         }
         &__img {
             &-shadow {
@@ -220,8 +222,18 @@
         &__btn {
             height: 45px;
             font-size: 14px;
+            margin-left: auto;
+            margin-right: auto;
             svg {
                 margin-right: 8px;
+            }
+        }
+        &__socials {
+            &-item {
+                svg {
+                    width: 25px;
+                    height: auto;
+                }
             }
         }
     }

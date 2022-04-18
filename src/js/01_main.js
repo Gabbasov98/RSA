@@ -179,6 +179,27 @@ $(document).ready(function() {
 
 
     $(".works__example").twentytwenty();
+
+
+    $(".select-brand").change(function() {
+        let models = $(this).val().split(',');
+        let options = `<option selected hidden>Выберите модель</option>`
+
+        for (let i = 0; i < models.length; i++) {
+
+            options = options + `<option value="">${models[i]}</option>`
+        }
+        $(this).parents(".parent-selects").find(".select-model").html(options)
+    })
+
+    $(".seo__btn").click(function() {
+        $(this).siblings(".seo__p-hidden").removeClass("seo__p-hidden")
+        $(this).hide()
+    })
+
+    $(".services__item").click(function() {
+        $(this).toggleClass("services__item--active")
+    })
 });
 
 

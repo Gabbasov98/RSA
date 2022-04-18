@@ -51,15 +51,17 @@
 
 @@include('_calc-subcategories.html')
 
-<div class="calc-service__alerts"></div>
-<div class="calc-service__nav">
-    <div class="calc-service__sum">
-        <div class="calc-service__sum-price">
-            Итого: <span class="calc-service__sum-price-digits">0</span> руб
+<div class="calc-service__bottom">
+    <div class="calc-service__alerts"></div>
+    <div class="calc-service__nav">
+        <div class="calc-service__sum">
+            <div class="calc-service__sum-price">
+                Итого: <span class="calc-service__sum-price-digits">0</span> руб
+            </div>
+            <div class="calc-service__sum-days">
+                Срок: <span class="calc-service__sum-days-digits">0 дней</span>
+            </div>
         </div>
-        <div class="calc-service__sum-days">
-            Срок: <span class="calc-service__sum-days-digits">0 дней</span>
-        </div>
+        @@include('_button.html',{"class":"calc-service__btn","modal":"true"})
     </div>
-    @@include('_button.html',{"class":"calc-service__btn","modal":"true"})
 </div>

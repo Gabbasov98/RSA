@@ -62,6 +62,15 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        cursor: pointer;
+        &--active {
+            background: $green;
+            color: #fff;
+            .services__item-hint {
+                border-color: #fff;
+                color: #fff;
+            }
+        }
         &-left {
             display: flex;
             align-items: center;

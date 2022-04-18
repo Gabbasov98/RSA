@@ -55,6 +55,8 @@
         }
     }
     &__bottom {
+        width: 577px;
+        max-width: 100%;
         margin-top: 65px;
         display: flex;
         align-items: center;
@@ -89,7 +91,8 @@
         &__img {
             display: none;
         }
-        &__slider {
+        &__slider,
+        &__bottom {
             width: 100%;
         }
     }

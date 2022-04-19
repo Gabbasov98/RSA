@@ -44,12 +44,15 @@ select {
         display: flex;
         align-items: center;
         border-style: solid;
+        font-size: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
     .list {
         border-radius: 6px;
-        border-radius: 0;
-        border: 1px solid #25282A;
+        border: none;
         backdrop-filter: blur(15px);
+        padding: 0;
     }
     .option:hover,
     .option.focus,

@@ -179,6 +179,11 @@ $(document).ready(function() {
         setTab($(this), "services__tab", "services__content")
     })
 
+    $(".header__link").click(function() {
+        $(".header__burger").removeClass("header__burger--active")
+        $(".header__right").removeClass("header__right--active")
+    })
+
 
     $(".works__example").twentytwenty();
 

@@ -164,12 +164,23 @@
             &--active {
                 display: block;
             }
+            img {
+                width: 100%;
+            }
         }
         &-shadow {
             position: absolute;
             left: -40px;
             top: -200px;
             pointer-events: none;
+        }
+        &-marker {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 6px solid $green;
+            position: absolute;
+            display: block;
         }
     }
     &__group {
